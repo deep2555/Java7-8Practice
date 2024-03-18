@@ -6,8 +6,11 @@ public class MainOperation {
 		
 		TransportationCompany transportationCompany = new TransportationCompany();
 		transportationCompany.addVehicle(new Car("1234", "Maruti", 1999));
+		transportationCompany.addVehicle(new Truck("4567", "Ashok Leland", 1998));
+		
 		
 		transportationCompany.startVehicle("1234");
+		transportationCompany.honkVehicle("4567");
 
 	}
 
