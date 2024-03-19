@@ -14,14 +14,38 @@ public class Library {
 	}
 
 	// methods to handle items
-	public void addItemsToLibrary(String itemType) {
+	public void addItemsToLibrary(LibraryItems itemType) {
+		items.add(itemType);
+		System.out.println("your item is added to the library");
 
-		for (LibraryItems libraryItems : items) {
-			if (libraryItems.getItemType() == itemType) {
-				items.add(libraryItems);
-				System.out.println("your item is added to the library");
+	}
+
+	// remove item from the library
+	public void removeItemsToLibrary(LibraryItems itemType) {
+		items.remove(itemType);
+		System.out.println("your product is remove from the list");
+	}
+
+	// Search for item by id
+
+	public void searchItemsFromLibrary(String itemId) {
+//		List<LibraryItems> searchitem = new ArrayList<>();
+		
+		for (LibraryItems item : items) {
+			if(itemId == item.getItemId() ) {
+				System.out.println("items type is :"+ item.getItemType()+ " and item id is : "+ item.getItemId());
+				
 			}
 		}
 	}
+
+	// display all the items in the list
+	public void showItems() {
+		for (LibraryItems libraryItems : items) {
+			System.out.println(libraryItems.getItemId() + " " + libraryItems.getItemType());
+		}
+	}
+
+	
 
 }
