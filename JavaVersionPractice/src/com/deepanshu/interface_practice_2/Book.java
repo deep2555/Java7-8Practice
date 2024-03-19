@@ -23,7 +23,7 @@ public class Book implements LibraryItems {
 
 	@Override
 	public String getItemId() {
-		// TODO Auto-generated method stub
+		
 		return itemsId;
 	}
 
