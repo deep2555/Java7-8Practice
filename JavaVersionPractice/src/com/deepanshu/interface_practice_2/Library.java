@@ -17,7 +17,6 @@ public class Library {
 	public void addItemsToLibrary(LibraryItems itemType) {
 		items.add(itemType);
 		System.out.println("your item is added to the library");
-
 	}
 
 	// remove item from the library
