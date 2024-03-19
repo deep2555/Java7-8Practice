@@ -1,2 +1,0 @@
------------------------------------------------Practice Based Questions-----------------------
-1) designing a system to manage different types of vehicles in a transportation company. The company operates various vehicles, including cars, trucks, and motorcycles. Each vehicle has common characteristics such as a unique identification number, make, model, andyear of manufacture. Additionally, each vehicle has specific behaviors such as starting the engine, stopping, and honking.
