@@ -1,6 +1,6 @@
 package com.deepanshu.core.javaPractice;
 
-public class DailyClassTask {
+public class ClassBluePrintTask {
 
 	public static void main(String[] args) {
 //		Book designOfBook = new Book("Design", "Author", 1);
@@ -28,6 +28,8 @@ public class DailyClassTask {
 	}
 
 }
+
+
 /*
  * 1) Design the course class and add the instance variable and static variable
  * simple book class for learning about the properties and its behavior
