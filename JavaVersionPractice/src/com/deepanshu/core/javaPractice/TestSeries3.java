@@ -1,6 +1,7 @@
 package com.deepanshu.core.javaPractice;
 
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 public class TestSeries3 {
 
@@ -11,10 +12,12 @@ public class TestSeries3 {
 //		int[] arr = { 1, 23, 5, 6, 78 };
 //		searchArray(arr);
 		// here i am sending the number by position 
-		int count =8;
-		for(int i= 1; i<=count; i++) {
-			System.out.println(fibonaccRecc(i));
-		}
+//		int count =8;
+//		for(int i= 1; i<=count; i++) {
+//			System.out.println(fibonaccRecc(i));
+//		}
+		System.out.println(checkPalin("nitin"));
+		System.out.println(isPalin("yuu"));
 		
 
 	}
@@ -65,7 +68,7 @@ public class TestSeries3 {
 		}
 	
 	
-// find the maximum array using for each loop
+	// find the maximum array using for each loop
 	public static void searchArray(int[] arr) {
 		int max = 0;
 		for (int num : arr) {
@@ -76,6 +79,33 @@ public class TestSeries3 {
 			}
 		}
 		System.out.println("the maximum number is :" + max);
+	}
+	//check string palindrome using normal 	
+	public static boolean checkPalin(String str) {
+		int left =0;
+		int right = str.length()-1; // here get the index of the string
+		
+		while(left<right) {
+			if(str.charAt(left)!= str.charAt(right)) {
+				return false;
+			}
+			left++;
+			right--;
+		}
+		return true;
+		
+	}
+	//check string palindrome using recursion
+	public static boolean isPalin(String str) {
+		// base case;
+		if(str.length()<=1) {
+			return true;
+		}
+		if(str.charAt(0)!= str.charAt(str.length()-1)) {
+			return false;
+		}
+		String sub = str.substring(1,str.length()-1);
+		return isPalin(sub);
 	}
 
 }
