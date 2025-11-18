@@ -3,7 +3,7 @@ package com.deepanshu.core.javaPractice;
 import java.util.Scanner;
 
 //find the minimum of two number
-public class TernaryAndSwitchCaseTask {
+public class TestSeries2 {
 
 	public static void main(String[] args) {
 

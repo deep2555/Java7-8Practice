@@ -1,6 +1,6 @@
 package com.deepanshu.core.javaPractice;
 
-public class ClassBluePrintTask {
+public class TestSeries1 {
 
 	public static void main(String[] args) {
 //		Book designOfBook = new Book("Design", "Author", 1);
