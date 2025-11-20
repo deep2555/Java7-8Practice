@@ -1,4 +1,4 @@
-package com.deepanshu.core.javaPractice;
+package com.deepanshu.core.javaPractice.testSeries;
 
 import java.util.Scanner;
 

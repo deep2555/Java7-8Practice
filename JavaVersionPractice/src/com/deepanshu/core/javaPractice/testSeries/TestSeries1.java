@@ -1,4 +1,4 @@
-package com.deepanshu.core.javaPractice;
+package com.deepanshu.core.javaPractice.testSeries;
 
 public class TestSeries1 {
 
