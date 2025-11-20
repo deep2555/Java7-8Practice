@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class DailyClassLearningPractice {
 	public static void main(String[] args) {
 		
-		
 //		int count = 2;
 //		int[] getInput = TernaryOperators.getUserInput(count);
 //
@@ -32,6 +31,25 @@ public class DailyClassLearningPractice {
 
 	}
 
+}
+
+// new topic about oop concept
+class OopConceptPractice{
+	
+	
+	
+}
+
+// practice string and string buffer and string builder
+class StringTesterBuil{
+	public static void main(String[] args) {
+		StringBuilder st = new StringBuilder("first");
+		 st.append(2554114);
+		 st.append("jncj");
+		 st.toString();
+		 
+		 System.out.println(st);
+	}
 }
 
 // practice recursion
