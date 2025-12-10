@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class DailyClassLearningPractice {
 	public static void main(String[] args) {
-		
+
 //		int count = 2;
 //		int[] getInput = TernaryOperators.getUserInput(count);
 //
@@ -13,7 +13,7 @@ public class DailyClassLearningPractice {
 //		}
 //
 //		getMaximumNumber(getInput);
-		
+
 	}
 
 	public static void getMaximumNumber(int[] arr) {
@@ -24,68 +24,144 @@ public class DailyClassLearningPractice {
 		 * if (arr[0] > arr[1]) { System.out.println("number 1 is greater"); } else {
 		 * System.out.println("number 2 is greater"); }
 		 */
-		
+
 		// with ternary operator
-		int maxNumber = arr[0]> arr[1]? arr[0] : arr[1];
-		System.out.println(maxNumber+ " is the greates number");
+		int maxNumber = arr[0] > arr[1] ? arr[0] : arr[1];
+		System.out.println(maxNumber + " is the greates number");
 
 	}
 
 }
 
 // new topic about oop concept
-class OopConceptPractice{
+class Person {
+
+	private String name;
+	private int age;
+	private String id;
+
+	public Person(String name, int age, String id) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.id = id;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (!(obj instanceof Person)) {
+			return false;
+		}
+		Person p = (Person) obj;
+		return p.name.equals(name) && p.age == age && p.id.equals(id);
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", age=" + age + ", id=" + id + "]";
+	}
+
+}
+
+// nested class practice
+
+class Car{
 	
+	private int numberOfDoors;
 	
+	 
+	public void repair() {
+		Tyre t = new Tyre();
+		
+	}
 	
+	public static class Tyre{
+		 private double width;
+		 private double pressue;
+		 private String material;
+	
+		 public void inflate() {
+			
+		 }
+	}
+}
+
+
+// practice equals methods object class
+class Test {
+	public static void main(String[] args) {
+		Person p1 = new Person("deep", 26, "2");
+		Person p2 = new Person("deep", 27, "2");
+
+		if (p1.equals(p2)) {
+			System.out.println("equals");
+		} else {
+			System.out.println("not equals");
+		}
+	}
 }
 
 // practice string and string buffer and string builder
-class StringTesterBuil{
+class StringTesterBuil {
 	public static void main(String[] args) {
 		StringBuilder st = new StringBuilder("first");
-		 st.append(2554114);
-		 st.append("jncj");
-		 st.toString();
-		 
-		 System.out.println(st);
+		st.append(2554114);
+		st.append("jncj");
+		st.toString();
+
+		System.out.println(st);
 	}
 }
 
 // practice recursion
-class RecursionPractice{
-	
+class RecursionPractice {
+
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("enter your number:");
 		int number = sc.nextInt();
 		System.out.println(factorial(number));
-		
+
 	}
-	
+
 	public static long factorial(int num) {
-		
+
 		/*
 		 * let start with normal for loop int result= 1; for(int i=1; i<=num; i++) {
-		 * result*=i; }
-		 System.out.println("the factorial is :"+ result);
-		*/
-		// RECURSIVE APPROCACH 
-		if(num==1) {
+		 * result*=i; } System.out.println("the factorial is :"+ result);
+		 */
+		// RECURSIVE APPROCACH
+		if (num == 1) {
 			return 1;
 		}
-		return num * factorial(num-1);
-				
+		return num * factorial(num - 1);
+
 	}
 }
-
-
-
-
-
-
-
-
 
 // Control statements
 //  1) Ternary operators
@@ -107,46 +183,44 @@ class TernaryOperators {
 	}
 
 }
-class SwitchCaseStatementPractice{
-	// what to do 
-	// get the number form user and will print the number of days 
-	
+
+class SwitchCaseStatementPractice {
+	// what to do
+	// get the number form user and will print the number of days
+
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("enter the numbers here:");
 		int number = sc.nextInt();
 		sc.close();
-		
-		
-		switch(number) {
-		case 1: 
+
+		switch (number) {
+		case 1:
 			System.out.println("Monday");
 			break;
-		case 2: 
+		case 2:
 			System.out.println("Tuesday");
 			break;
-		case 3: 
+		case 3:
 			System.out.println("Wednesday");
 			break;
-		case 4: 
+		case 4:
 			System.out.println("Thursday");
 			break;
-		case 5: 
+		case 5:
 			System.out.println("Friday");
 			break;
-		case 6: 
+		case 6:
 			System.out.println("Saturday");
 			break;
-		case 7: 
+		case 7:
 			System.out.println("Sunday");
 			break;
-			
-			default:
-				System.out.println("invalid daysa");
-				break;
+
+		default:
+			System.out.println("invalid daysa");
+			break;
 		}
 	}
-	
-	
-	
+
 }
