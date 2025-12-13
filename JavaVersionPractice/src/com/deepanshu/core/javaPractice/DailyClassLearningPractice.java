@@ -33,6 +33,22 @@ public class DailyClassLearningPractice {
 
 }
 
+//  new topic polymorphism
+class Vehicle{
+	
+}
+class Carr extends Vehicle{
+	
+}
+
+class TestTranspotaion{
+	public static void main(String[] args) {
+		Carr cc = new Carr();
+		Vehicle vh = new Carr();
+	}
+}
+
+
 // new topic about oop concept
 class Person {
 
