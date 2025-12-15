@@ -103,27 +103,52 @@ public class CoroporateManager {
 				}
 			}
 			
+			if (assigned) {
+                System.out.println("Status: Assigned");
+            } else {
+                System.out.println("Status: Unassigned");
+            }
+			
 		}
 	}
 
 	// testing
 	public static void main(String[] args) {
-		Employee emp = new Employee(1, "deepansu", "europe");
-		Laptop lap = new Laptop("22", "dell", 2022, 16);
-
-		CoroporateManager cm = new CoroporateManager();
-		cm.addEmployee(emp);
-		cm.addAsset(lap);
+		    Employee e1 = new Employee(1, "Deepanshu", "Europe");
+		    Employee e2 = new Employee(2, "Amit", "India");
+		    Employee e3 = new Employee(3, "Sarah", "USA");
+		    
+		    CoroporateManager cm = new CoroporateManager();
+		    
+		    cm.addEmployee(e1);
+		    cm.addEmployee(e2);
+		    cm.addEmployee(e3);
+		    
+		    // Assets (4: Laptop + Vehicle)
+		    Laptop l1 = new Laptop("A1", "Dell", 2022, 16);
+		    Laptop l2 = new Laptop("A2", "HP", 2021, 32);
+		    Vehicle v1 = new Vehicle("V1", "Tesla", 2023, "Electric");
+		    Vehicle v2 = new Vehicle("V2", "BMW", 2020, "Petrol");
 		
-		cm.assignAssetToEmployees(1, "22");
-		cm.generateAssestReport();
+		    cm.addAsset(l1);
+		    cm.addAsset(l2);
+		    cm.addAsset(v1);
+		    cm.addAsset(v2);
+		    
+		 // Assignment attempts
+		    cm.assignAssetToEmployees(1, "A1"); // ✅ success
+		    cm.assignAssetToEmployees(2, "A1"); // ❌ asset already assigned
+		    cm.assignAssetToEmployees(1, "A2"); // ❌ employee already has asset
+		    cm.assignAssetToEmployees(2, "V1"); // ✅ success
+		     
+		    cm.generateAssestReport();
 
-		Employee result = cm.findEmployee(1);
-		if (result != null) {
-			result.displayDetails();
-		} else {
-			System.out.println("employee not found");
-		}
+//		Employee result = cm.findEmployee(1);
+//		if (result != null) {
+//			result.displayDetails();
+//		} else {
+//			System.out.println("employee not found");
+//		}
 	}
 
 }
