@@ -12,8 +12,26 @@ public abstract class LibraryItem {
 		this.title = title;
 		this.publicationYear = publicationYear;
 	}
+
+	public int getItemsId() {
+		return itemsId;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public int getPublicationYear() {
+		return publicationYear;
+	}
 	
-	
+	// displayable all method
+	 
+	public void displayInfo() {
+		System.out.println("items id is:"+ itemsId);
+		System.out.println("title is:"+ title);
+		System.out.println("publication year is:"+ publicationYear);
+	}
 	
 	
 }
