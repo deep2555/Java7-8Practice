@@ -33,6 +33,15 @@ public class DailyClassLearningPractice {
 
 }
 
+// exception handling practice 
+
+
+
+
+
+
+
+
 //  new topic polymorphism
 class Vehicle{
 	
