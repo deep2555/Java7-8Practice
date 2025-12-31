@@ -1,5 +1,7 @@
 package com.deepanshu.core.javaPractice;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class DailyClassLearningPractice {
@@ -33,12 +35,47 @@ public class DailyClassLearningPractice {
 
 }
 
-// exception handling practice 
+// wrapper classes
 
+class WrapperPractice {
+	
+	public static void main(String[] args) {
+		
+		Integer in = 55;
+//		 we can use different methods in this 
+//		 where we use this in collection concept there we have to work with 
+//		 different object of primitive type so we use ther
+	}
+}
 
-
-
-
+/*collections practice 
+ * library
+ * 1) List Interface
+ * 
+ * 
+ * 
+ * 
+ * 
+ * */
+class CollectionPr{
+	
+	
+	// List interface practice
+	// 1) array List
+	public static void main(String[] args) {
+		List<String> test = new ArrayList<>();
+		test.add("Deepanshu Prashar");
+		test.add("How");
+		
+		// to add in specific index
+		test.add(1, "what" );
+		
+		for(String str : test) {
+			System.out.println(str);
+		}
+		
+	}
+}
 
 
 
