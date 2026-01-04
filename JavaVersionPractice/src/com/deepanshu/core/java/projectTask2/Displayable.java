@@ -5,5 +5,5 @@ public interface Displayable {
 	/*
 	 * here Prints a neatly formatted summary of the item's details
 	 */	
-	void diplay();	
+	void diplayInfo();	
 }
