@@ -56,11 +56,14 @@ public class LibraryCatalog {
 
 //		libraryCatalog.performSearch(query1);
 //		libraryCatalog.performSearch(query2);
-		
+
 		try {
-		  int dataDensityScore = libraryCatalog.calculateDataDensity("4");
-		  System.out.println("data density score: "+dataDensityScore);
-		 // libraryCatalog.performSearch(query1);
+			int dataDensityScore = libraryCatalog.calculateDataDensity("4");
+			System.out.println("data density score: " + dataDensityScore);
+
+			String stt = libraryCatalog.standardizeTitle(journal1);
+			System.out.println("tht eee: " + stt);
+			// libraryCatalog.performSearch(query1);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -69,6 +72,7 @@ public class LibraryCatalog {
 	}
 
 	// interview style code
+	// calculate data density
 
 	public int calculateDataDensity(String itemid) throws Exception {
 
@@ -104,21 +108,37 @@ public class LibraryCatalog {
 			}
 			return bookAuthor.length() + vowelsCount;
 
-		}
-		else if(itemFound instanceof Journal) {
-			
-			Journal journal = (Journal)itemFound;
+		} else if (itemFound instanceof Journal) {
+
+			Journal journal = (Journal) itemFound;
 			int totalCount = 0;
-			if(journal.getKeywords()!= null) {
-				for(String key : journal.getKeywords()) {
+			if (journal.getKeywords() != null) {
+				for (String key : journal.getKeywords()) {
 					totalCount += key.length();
 				}
 			}
-			
+
 			return totalCount - journal.getVolumnNumber();
-		}	
-		
+		}
+
 		return -1;
+
+	}
+
+	// String Manipulation Task:
+
+	public String standardizeTitle(LibraryItem libraryItem) {
+
+		/*
+		 * Replace all non-alphanumeric characters (excluding spaces) with nothing.
+		 * Example: "A & B Test" becomes "a b test"
+		 */
+		String lowerTitleAndRemoveSpecialCh = libraryItem.getTitle().toLowerCase().replaceAll("[^a-z0-9]", " ")
+				.replaceAll("\\s+", "-");
+
+		System.out.println("lower title is: " + lowerTitleAndRemoveSpecialCh);
+
+		return lowerTitleAndRemoveSpecialCh;
 
 	}
 
