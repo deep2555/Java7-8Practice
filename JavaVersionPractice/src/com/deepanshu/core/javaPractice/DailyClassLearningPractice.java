@@ -1,6 +1,7 @@
 package com.deepanshu.core.javaPractice;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -63,16 +64,31 @@ class CollectionPr{
 	// List interface practice
 	// 1) array List
 	public static void main(String[] args) {
+//		 1) array List
 		List<String> test = new ArrayList<>();
-		test.add("Deepanshu Prashar");
-		test.add("How");
+		test.add("sjhc");
+		test.add("sccdkjsc");
+		/*
+		 * test.add("Deepanshu Prashar"); test.add("How");
+		 * 
+		 * // to add in specific index test.add(1, "what" );
+		 * 
+		 * for(String str : test) { System.out.println(str); }
+		 * 
+		 * 
+		 */	
+		for(String str : test) { System.out.println(str); }
+		List<String> check = Arrays.asList("Deepanshu", "hello");
+		System.out.println("adding!!!!!!!!!!!!!!!!");
+		test.addAll(check);
+		for(String str : test) { System.out.println(str); }
+		System.out.println("removinf!!!!!!!!!!!!!!!!");
+		test.removeAll(check);
 		
-		// to add in specific index
-		test.add(1, "what" );
+		for(String str : test) { System.out.println(str); }
 		
-		for(String str : test) {
-			System.out.println(str);
-		}
+//		2) Linked List
+		
 		
 	}
 }
