@@ -10,8 +10,15 @@ public class Journal extends LibraryItem implements Searchable {
 		this.volumnNumber = volumnNumber;
 		this.keywords = keywords;
 	}
+	
 
 	// for displaying the info also comma separated keywords
+	public int getVolumnNumber() {
+		return volumnNumber;
+	}
+	public String[] getKeywords() {
+		return keywords;
+	}
 	@Override
 	public void displayInfo() {
 		super.displayInfo();
@@ -33,7 +40,7 @@ public class Journal extends LibraryItem implements Searchable {
 		}
 
 		String normalizeQuery = query.toLowerCase();
-		System.out.println("normalize query is:" + normalizeQuery);
+		System.out.println("normalize journal query is:" + normalizeQuery);
 		/*
 		 * here is the normal approach to check the null and the if the keyword contains
 		 * the string
@@ -42,7 +49,7 @@ public class Journal extends LibraryItem implements Searchable {
 		boolean keywordMatches = false;
 		if (keywords != null) {
 			for (String key : keywords) {
-				if (key.equals(normalizeQuery)) {
+				if (key!= null && key.toLowerCase().equals(normalizeQuery)) {
 					keywordMatches = true;
 					break;
 				}
@@ -50,7 +57,7 @@ public class Journal extends LibraryItem implements Searchable {
 			}
 		}
 
-		return ((this.getTitle() != null && this.getTitle().contentEquals(normalizeQuery))|| keywordMatches);
+		return ((this.getTitle() != null && this.getTitle().contains(normalizeQuery))|| keywordMatches);
 	}
 
 }

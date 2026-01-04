@@ -33,5 +33,7 @@ public abstract class LibraryItem {
 		System.out.println("publication year is:"+ publicationYear);
 	}
 	
+	// abstract method for polymorphic design
+	public abstract boolean matches(String query);
 	
 }

@@ -8,6 +8,12 @@ public class Book extends LibraryItem implements Searchable {
 		super(itemsId, title, publicationYear);
 		this.author = author;
 	}
+	
+	
+
+	public String getAuthor() {
+		return author;
+	}
 
 	@Override
 	public void displayInfo() {
@@ -25,9 +31,9 @@ public class Book extends LibraryItem implements Searchable {
 			return false;
 		}
 		String normalizeQuery = query.toLowerCase();
-		System.out.println("normalize query is:" + normalizeQuery);
+		System.out.println("normalize book query is:" + normalizeQuery);
 
-		return ((this.getTitle() != null && this.getTitle().contentEquals(normalizeQuery))
+		return ((this.getTitle() != null && this.getTitle().toLowerCase().contentEquals(normalizeQuery))
 				|| author != null && author.contentEquals(normalizeQuery));
 
 	}
@@ -36,6 +42,9 @@ public class Book extends LibraryItem implements Searchable {
 //	public static void main(String[] args) {
 //		Book book = new Book(1, "zinda hu me", 1234, "chetan bhagat");
 //		System.out.println(book.matches("zinda h me"));
+//		// display all info
+//		
+//		book.displayInfo();
 //	}
 
 }
